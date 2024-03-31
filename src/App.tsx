@@ -1,9 +1,18 @@
 import { FC } from 'react'
 
+import { GridLayout } from './components/gridLayout/GridLayout'
+import { TotalTime } from './components/totalTime/TotalTime'
+import { TimeSidebar } from './components/timeSidebar/TimeSidebar'
+import { TimeCalculator } from './components/timeCalculator/TimeCalculator'
+
 const App: FC = () => {
   return (
     <div className='app'>
-      <h1>App</h1>
+      <GridLayout>
+        <TotalTime />
+        <TimeCalculator />
+        <TimeSidebar />
+      </GridLayout>
     </div>
   )
 }
