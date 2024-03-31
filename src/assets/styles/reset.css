@@ -20,3 +20,19 @@ h5,
 h6 {
   margin: 0;
 }
+
+input {
+  border: none;
+}
+
+input:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

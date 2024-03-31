@@ -1,9 +1,14 @@
 import { FC } from 'react'
 
+import cn from './TimeCalculator.module.css'
+import { TimeCalculatorContent } from './TimeCalculatorContent'
+
 const TimeCalculator: FC = () => {
   return (
-    <div>
-      <h1>TimeCalculator</h1>
+    <div className={cn['calculator']}>
+      <div className={cn['wrapper']}>
+        <TimeCalculatorContent />
+      </div>
     </div>
   )
 }

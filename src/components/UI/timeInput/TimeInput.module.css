@@ -1,0 +1,26 @@
+.time-input {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  width: fit-content;
+}
+
+.input {
+  padding: 20px;
+  font-size: var(--fz-h1);
+  color: inherit;
+  background-color: transparent;
+  text-align: center;
+  border: var(--border-gray);
+}
+
+.input:first-child {
+  border-right-width: 1px;
+}
+
+.input:nth-child(2) {
+  border-left-width: 1px;
+}
+
+.input:focus-visible {
+  border: var(--border-light);
+}

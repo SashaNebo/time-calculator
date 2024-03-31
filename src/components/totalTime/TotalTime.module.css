@@ -6,7 +6,6 @@
   display: flex;
   align-items: baseline;
   column-gap: 20px;
-  padding: 40px 0;
 }
 
 .total__text {
@@ -26,4 +25,8 @@
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
+}
+
+.wrapper {
+  padding: 40px 0;
 }
