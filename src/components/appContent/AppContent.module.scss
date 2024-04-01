@@ -1,0 +1,5 @@
+.grid {
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-template-rows: min-content 1fr;
+}
