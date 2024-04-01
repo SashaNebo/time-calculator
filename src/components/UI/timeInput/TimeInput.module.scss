@@ -1,0 +1,41 @@
+.time-input {
+  display: grid;
+  width: fit-content;
+
+  &.xl {
+    grid-template-columns: 140px 140px;
+  }
+
+  &.lg {
+    grid-template-columns: 140px 140px;
+  }
+}
+
+.input {
+  color: inherit;
+  background-color: transparent;
+  text-align: center;
+  border: var(--border-gray);
+
+  &.xl {
+    padding: 20px;
+    font-size: var(--fz-h1);
+  }
+
+  &.lg {
+    padding: 10px 20px;
+    font-size: var(--fz-h2);
+  }
+
+  &:first-child {
+    border-right-width: 1px;
+  }
+
+  &:nth-child(2) {
+    border-left-width: 1px;
+  }
+
+  &:focus-visible {
+    border: var(--border-light);
+  }
+}

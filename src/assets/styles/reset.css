@@ -36,3 +36,15 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: none;
+  background-color: var(--color-dark-gray);
+}

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import cn from './TimeCalculator.module.css'
+import cn from './TimeCalculator.module.scss'
 import { TimeCalculatorBottom } from './TimeCalculatorBottom'
 import { TimeInput } from '../UI/timeInput/TimeInput'
 import { TimeSwitcher } from './TimeSwitcher'

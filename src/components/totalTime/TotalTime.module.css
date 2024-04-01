@@ -1,5 +1,15 @@
 .total {
-  background-color: #202020;
+  background-color: var(--color-dark-gray);
+}
+
+.wrapper {
+  padding: 40px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .total__values {
@@ -19,14 +29,4 @@
 
 .total__m {
   font-size: var(--fz-h2);
-}
-
-.container {
-  width: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.wrapper {
-  padding: 40px 0;
 }

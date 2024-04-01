@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 
-import cn from './TimeCalculator.module.css'
+import cn from './TimeCalculator.module.scss'
 
 const TimeSwitcher: FC = () => {
   const [active, setActive] = useState(false)

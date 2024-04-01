@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import cn from './TimeCalculator.module.css'
+import cn from './TimeCalculator.module.scss'
 
 const TimeCalculatorBottom: FC = () => {
   return (
