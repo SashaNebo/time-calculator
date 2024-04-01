@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import cn from './TotalTime.module.css'
+import cn from './TotalTime.module.scss'
 
 const TotalTime: FC = () => {
   return (

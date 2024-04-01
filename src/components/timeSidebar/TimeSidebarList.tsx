@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import cn from './TimeSidebar.module.scss'
 import { TimeInput } from '../UI/timeInput/TimeInput'
-import { IconSvg } from '../UI/IconSvg/IconSvg'
+import { ButtonIcon } from '../UI/buttonIcon/ButtonIcon'
 
 const TimeSidebarList: FC = () => {
   return (
@@ -12,13 +12,8 @@ const TimeSidebarList: FC = () => {
           <TimeInput size='lg' />
 
           <div className={cn['list__item-buttons']}>
-            <button className={cn['list__item-btn']}>
-              <IconSvg supClassName={cn['list__item-icon']} iconName='edit' />
-            </button>
-
-            <button className={cn['list__item-btn']}>
-              <IconSvg supClassName={cn['list__item-icon']} iconName='remove' />
-            </button>
+            <ButtonIcon iconName='edit' />
+            <ButtonIcon iconName='remove' />
           </div>
         </div>
       ))}

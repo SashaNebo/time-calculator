@@ -1,0 +1,12 @@
+.button {
+  display: flex;
+
+  &:hover .icon {
+    fill: #000;
+  }
+}
+
+svg {
+  fill: #181818;
+  transition: all .1s linear;
+}

@@ -19,7 +19,7 @@
 .time {
   height: 100vh;
   display: grid;
-  grid-template-rows: 75vh 1fr;
+  grid-template-rows: 66vh 1fr;
 
   &-list {
     overflow-x: hidden;
@@ -63,23 +63,41 @@
       display: flex;
       column-gap: 10px;
     }
-
-    &-btn {
-      display: flex;
-    }
-
-    &-btn:hover &-icon {
-      fill: #000;
-    }
-
-    &-icon {
-      fill: #181818;
-      transition: all .1s linear;
-    }
   }
 }
 
 
 .time-create {
   background-color: var(--color-dark-gray);
+
+  &__wrapper {
+    padding: 40px 0 0;
+  }
+
+  &__title {
+    font-size: var(--fz-h2);
+    color: var(--color-gray);
+  }
+
+  &__block {
+    margin-top: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &__btn {
+    display: block;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    fill: #484848;
+  }
 }

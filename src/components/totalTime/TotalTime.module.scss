@@ -1,0 +1,32 @@
+.total {
+  background-color: var(--color-dark-gray);
+
+  &__values {
+    display: flex;
+    align-items: baseline;
+    column-gap: 20px;
+  }
+
+  &__text {
+    font-size: var(--fz-h2);
+    color: var(--color-gray);
+  }
+
+  &__h {
+    font-size: var(--fz-h1);
+  }
+
+  &__m {
+    font-size: var(--fz-h2);
+  }
+}
+
+.wrapper {
+  padding: 40px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
