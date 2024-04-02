@@ -1,20 +1,23 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
 import cn from './TimeCalculator.module.scss'
 
-const TimeSwitcher: FC = () => {
-  const [active, setActive] = useState(false)
+interface P {
+  calcOperation: 'minus' | 'plus'
+  setCalcOperation: React.Dispatch<React.SetStateAction<'minus' | 'plus'>>
+}
 
+const TimeSwitcher: FC<P> = ({ calcOperation, setCalcOperation }) => {
   return (
     <div className={cn['switcher']}>
       <span
-        onClick={() => setActive(() => false)}
-        className={[cn['minus'], !active && cn['active']].join(' ')}>
+        onClick={() => setCalcOperation('minus')}
+        className={[cn['minus'], calcOperation === 'minus' ? cn['active'] : ''].join(' ')}>
         -
       </span>
       <span
-        onClick={() => setActive(() => true)}
-        className={[cn['plus'], active && cn['active']].join(' ')}>
+        onClick={() => setCalcOperation('plus')}
+        className={[cn['plus'], calcOperation === 'plus' ? cn['active'] : ''].join(' ')}>
         +
       </span>
     </div>
