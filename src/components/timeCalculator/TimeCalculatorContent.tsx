@@ -16,13 +16,20 @@ const TimeCalculatorContent: FC = () => {
   const timeForm = getTimeForm(watch)
   const time: TIME = calculationTimeInterval(timeForm, calcOperation)
   const submit = useTimeCalculator(time, setFocus, reset)
+  const onKeyDownHandler = ({ code }: { code: string }) => code === 'Enter' && submit()
 
   return (
     <div className={cn['container']}>
       <div className={cn['calculator__inputs']}>
-        <TimeInput propsHH={{ ...hh1Reg, autoFocus: true }} propsMM={{ ...mm1Reg }} />
+        <TimeInput
+          propsHH={{ ...hh1Reg, onKeyDown: onKeyDownHandler, autoFocus: true }}
+          propsMM={{ ...mm1Reg, onKeyDown: onKeyDownHandler }}
+        />
         <TimeSwitcher calcOperation={calcOperation} setCalcOperation={setCalcOperation} />
-        <TimeInput propsHH={{ ...hh2Reg }} propsMM={{ ...mm2Reg }} />
+        <TimeInput
+          propsHH={{ ...hh2Reg, onKeyDown: onKeyDownHandler }}
+          propsMM={{ ...mm2Reg, onKeyDown: onKeyDownHandler }}
+        />
       </div>
       <TimeCalculatorBottom submit={submit} time={time} />
     </div>
