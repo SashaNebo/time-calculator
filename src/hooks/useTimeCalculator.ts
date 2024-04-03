@@ -1,6 +1,8 @@
+import { useContext } from 'react'
 import { UseFormReset, UseFormSetFocus } from 'react-hook-form'
 
-import { TIME_FORM } from '../types'
+import { TimeIntervalsContext } from '../context'
+import { INTERVALS_CONTEXT, TIME_FORM } from '../types'
 import { TIME } from '../components/timeCalculator/additional'
 
 const useTimeCalculator = (
@@ -8,14 +10,18 @@ const useTimeCalculator = (
   setFocus: UseFormSetFocus<TIME_FORM>,
   reset: UseFormReset<TIME_FORM>,
 ) => {
-  const isEmpty = !Object.values(time).some((v) => v !== '0')
-
-  const addInterval = () => {
-    setFocus('hh1')
-    reset({ hh1: '', hh2: '', mm1: '', mm2: '' })
-  }
+  const { setIntervals } = useContext(TimeIntervalsContext as INTERVALS_CONTEXT)
 
   return () => {
+    const isEmpty = !Object.values(time).some((v) => v !== '0')
+
+    const addInterval = () => {
+      const interval = { id: String(Date.now()), hh: time.hh, mm: time.mm }
+      setIntervals(interval, 'add')
+      setFocus('hh1')
+      reset({ hh1: '', hh2: '', mm1: '', mm2: '' })
+    }
+
     isEmpty ? setFocus('hh1') : addInterval()
   }
 }

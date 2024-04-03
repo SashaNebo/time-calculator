@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { ButtonHTMLAttributes, FC } from 'react'
 
 import cn from './ButtonIcon.module.scss'
 import { IconSvg } from '../IconSvg/IconSvg'
@@ -10,12 +10,17 @@ interface P {
   buttonClassName?: string
 }
 
-const ButtonIcon: FC<P> = ({ iconName, iconClassName, buttonClassName }) => {
+const ButtonIcon: FC<P & ButtonHTMLAttributes<HTMLButtonElement>> = ({
+  iconName,
+  iconClassName,
+  buttonClassName,
+  ...restProps
+}) => {
   const cnButton = [cn['button'], buttonClassName ?? ''].join(' ')
   const cnIcon = [cn['icon'], iconClassName ?? ''].join(' ')
 
   return (
-    <button className={cnButton}>
+    <button className={cnButton} {...restProps}>
       <IconSvg supClassName={cnIcon} iconName={iconName} />
     </button>
   )

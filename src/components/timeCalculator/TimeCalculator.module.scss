@@ -56,7 +56,7 @@
 
 .container {
   width: 100%;
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -90,5 +90,22 @@
   &.active {
     color: #fff;
     background-color: #383838;
+  }
+}
+
+@media (max-width: 1400px) {
+  .calculator {
+
+
+    &__inputs {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+
+    &__bottom {
+      margin-top: 100px;
+      flex-direction: column-reverse;
+    }
   }
 }

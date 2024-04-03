@@ -6,17 +6,15 @@ import { TimeCalculatorBottom } from './TimeCalculatorBottom'
 import { TimeInput } from '../UI/timeInput/TimeInput'
 import { TimeSwitcher } from './TimeSwitcher'
 import { TIME_FORM } from '../../types'
+import { TIME, calculationTimeInterval, getTimeForm, registering } from './additional'
 import { useTimeCalculator } from '../../hooks/useTimeCalculator'
-import { TIME, getTimeForm, registering } from './additional'
-import { useCalculation } from '../../hooks/useCalculation'
 
 const TimeCalculatorContent: FC = () => {
   const { register, setFocus, watch, reset } = useForm<TIME_FORM>()
   const [calcOperation, setCalcOperation] = useState<'minus' | 'plus'>('minus')
   const { hh1Reg, hh2Reg, mm1Reg, mm2Reg } = registering(register)
   const timeForm = getTimeForm(watch)
-
-  const time: TIME = useCalculation(timeForm, calcOperation)
+  const time: TIME = calculationTimeInterval(timeForm, calcOperation)
   const submit = useTimeCalculator(time, setFocus, reset)
 
   return (
@@ -26,7 +24,6 @@ const TimeCalculatorContent: FC = () => {
         <TimeSwitcher calcOperation={calcOperation} setCalcOperation={setCalcOperation} />
         <TimeInput propsHH={{ ...hh2Reg }} propsMM={{ ...mm2Reg }} />
       </div>
-
       <TimeCalculatorBottom submit={submit} time={time} />
     </div>
   )

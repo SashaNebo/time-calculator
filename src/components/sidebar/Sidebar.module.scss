@@ -1,5 +1,5 @@
 .sidebar {
-  width: 25vw;
+  width: 480px;
   height: 100vh;
   grid-column: 2/3;
   grid-row: 1/3;
@@ -53,11 +53,17 @@
   &-item {
     display: flex;
     align-items: end;
-    justify-content: space-between;
+    column-gap: 30px;
+    // justify-content: space-between;
 
     &__buttons {
       display: flex;
       column-gap: 10px;
+
+      & .icon-remove {
+        width: 35px;
+        height: 35px;
+      }
     }
   }
 }
