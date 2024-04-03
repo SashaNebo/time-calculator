@@ -33,6 +33,26 @@
     }
   }
 
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__btn {
+    display: flex;
+
+    & svg {
+      width: 45px;
+      height: 45px;
+      fill: #433f3f;
+
+      &:hover {
+        fill: var(--color-gray);
+      }
+    }
+  }
+
   &__button {
     height: min-content;
     margin-top: auto;

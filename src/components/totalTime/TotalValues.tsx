@@ -15,7 +15,7 @@ const TotalValues: FC = () => {
       <h1 className={cn['total__h']}>
         {hh}h {mm}m
       </h1>
-      <h2 className={cn['total__m']}>{fullMinutes}m</h2>
+      <h2 className={cn['total__m']}>{`(${fullMinutes}m)`}</h2>
     </div>
   )
 }

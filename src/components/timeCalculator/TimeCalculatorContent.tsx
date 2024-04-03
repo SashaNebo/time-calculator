@@ -31,7 +31,7 @@ const TimeCalculatorContent: FC = () => {
           propsMM={{ ...mm2Reg, onKeyDown: onKeyDownHandler }}
         />
       </div>
-      <TimeCalculatorBottom submit={submit} time={time} />
+      <TimeCalculatorBottom submit={submit} time={time} reset={reset} setFocus={setFocus} />
     </div>
   )
 }
