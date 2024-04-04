@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 import cn from './IconSvg.module.scss'
-import { sprite } from '../../../helpers/index'
+import sprite from '../../../assets/images/sprite.svg'
 import { SPRITE_ICONS } from '../../../types'
 
 interface P {

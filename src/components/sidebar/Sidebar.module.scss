@@ -60,9 +60,13 @@
       display: flex;
       column-gap: 10px;
 
-      & .icon-remove {
+      & svg {
         width: 35px;
         height: 35px;
+
+        &:hover {
+          fill: #000;
+        }
       }
     }
   }
@@ -90,15 +94,19 @@
   &__buttons {
     display: flex;
     column-gap: 10px;
+
+    & svg {
+      width: 30px;
+      height: 30px;
+      fill: #484848;
+
+      &:hover {
+        fill: #000;
+      }
+    }
   }
 
   &__btn {
     display: block;
-  }
-
-  &__icon {
-    width: 30px;
-    height: 30px;
-    fill: #484848;
   }
 }

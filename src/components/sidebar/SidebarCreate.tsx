@@ -48,17 +48,12 @@ const SidebarCreate: FC = () => {
               propsMM={{ ...mmReg, onKeyDown: onKeyDownHandler }}
             />
             <div className={cn['create__buttons']}>
-              <ButtonIcon
-                onClick={() => createInterval(time)}
-                iconClassName={cn['create__icon']}
-                iconName='check'
-              />
+              <ButtonIcon onClick={() => createInterval(time)} iconName='check' />
               <ButtonIcon
                 onClick={() => {
                   setFocus('hh')
                   reset({ hh: '', mm: '' })
                 }}
-                iconClassName={cn['create__icon']}
                 iconName='remove'
               />
             </div>

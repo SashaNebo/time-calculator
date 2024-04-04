@@ -39,11 +39,7 @@ const SidebarIntervalsItem: FC<P> = ({ interval, setIntervals }) => {
       />
 
       <div className={cn['intervals-item__buttons']}>
-        <ButtonIcon
-          onClick={() => setIntervals(interval, 'remove')}
-          iconClassName={cn['icon-remove']}
-          iconName='remove'
-        />
+        <ButtonIcon onClick={() => setIntervals(interval, 'remove')} iconName='remove' />
       </div>
     </div>
   )
