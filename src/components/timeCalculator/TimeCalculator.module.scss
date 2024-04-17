@@ -30,6 +30,10 @@
 
     &-value {
       font-size: var(--fz-h2);
+
+      &.hh {
+        font-size: 54px;
+      }
     }
   }
 

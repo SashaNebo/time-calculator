@@ -24,7 +24,7 @@ const TimeCalculatorBottom: FC<P> = ({ submit, time, reset, setFocus }) => {
 
         <div className={cn['calculator__info']}>
           <h2 className={cn['calculator__info-text']}>In hours:</h2>
-          <h1 className={cn['calculator__info-value']}>
+          <h1 className={[cn['calculator__info-value'], cn['hh']].join(' ')}>
             {time.hh}h {time.mm}m
           </h1>
         </div>
