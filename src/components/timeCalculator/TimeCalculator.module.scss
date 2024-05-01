@@ -1,4 +1,5 @@
 .calculator {
+  align-self: center;
   background-color: #000;
 
   &__inputs {
@@ -8,9 +9,10 @@
   }
 
   &__bottom {
-    margin-top: 250px;
     display: flex;
     justify-content: space-between;
+    margin-top: 200px;
+    margin-bottom: 50px;
   }
 
   &__values {
@@ -30,6 +32,12 @@
 
     &-value {
       font-size: var(--fz-h2);
+      font-weight: 700;
+      color: #999;
+
+      .min {
+        font-size: 36px;
+      }
 
       &.hh {
         font-size: 54px;
@@ -80,7 +88,7 @@
 
 .container {
   width: 100%;
-  max-width: 70%;
+  max-width: 65%;
   margin: 0 auto;
 }
 
