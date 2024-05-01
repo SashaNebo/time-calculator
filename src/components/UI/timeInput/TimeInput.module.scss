@@ -2,6 +2,10 @@
   display: grid;
   width: fit-content;
 
+  &.xxl {
+    grid-template-columns: 160px 160px;
+  }
+
   &.xl {
     grid-template-columns: 140px 140px;
   }
@@ -16,6 +20,11 @@
   background-color: transparent;
   text-align: center;
   border: var(--border-gray);
+
+  &.xxl {
+    padding: 20px;
+    font-size: 48px;
+  }
 
   &.xl {
     padding: 20px;

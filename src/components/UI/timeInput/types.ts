@@ -4,7 +4,7 @@ import { UseFormRegister } from 'react-hook-form'
 import { TIME_FORM } from '../../../types'
 
 interface ISIZE {
-  size?: 'xl' | 'lg'
+  size?: 'xxl' | 'xl' | 'lg'
 }
 
 type INPUT_PROPS = {
