@@ -21,12 +21,12 @@ const TimeCalculatorContent: FC = () => {
   return (
     <div className={cn['container']}>
       <div className={cn['calculator__inputs']}>
-        <TimeInput
+        <TimeInput size='xxl'
           propsHH={{ ...hh1Reg, onKeyDown: onKeyDownHandler, autoFocus: true }}
           propsMM={{ ...mm1Reg, onKeyDown: onKeyDownHandler }}
         />
         <TimeSwitcher calcOperation={calcOperation} setCalcOperation={setCalcOperation} />
-        <TimeInput
+        <TimeInput size='xxl'
           propsHH={{ ...hh2Reg, onKeyDown: onKeyDownHandler }}
           propsMM={{ ...mm2Reg, onKeyDown: onKeyDownHandler }}
         />
